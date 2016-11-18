@@ -1,0 +1,94 @@
+div{
+
+	border: 5px double red;
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+
+}
+
+.background_clip{
+	background-color: green;
+	background-clip: content-box;
+}
+
+.background_origin{
+	width: 100px;
+	height: 100px;
+	background-image: url('bgpattern.png');
+	background-repeat: no-repeat;
+	background-origin: content-box;
+}
+
+.box-shadow{
+	background-color: red;
+	/* eixoX, eixoY, Blur, Propagacao, Cor */
+	box-shadow: 24px -14px 80px 34px black, inset 0px 0px 20px 5px blue;
+}
+
+.text-shadow{
+	text-shadow: 10px 6px 3px green, -6px -7px 5px blue;
+}
+
+.border-radius{
+	background-color: orange;
+	border-radius: 60px 35px 1903px 55px;
+}
+
+.transition:hover{
+	width: 300px;
+	height: 300px;
+}
+
+.transition{
+	transition-property: width, height;
+	transition-duration: 5s;
+	transition-timing-function: steps(5);
+	delay: 3s;
+
+	/* transition: width 5s linear 3s */;
+}
+
+.rotate2d{
+	transform: rotate(-90deg);
+}
+
+.translate{
+	transform: translate(10px,20px);
+}
+
+.skew{
+	transform: skew(10deg,20deg);
+}
+
+.rotateX{
+	backface-visibility: hidden;
+	transform: rotateX(50deg);
+}
+
+.rotateY{
+	transform: rotateY(50deg);
+}
+
+.perspectiva_fora{
+	perspective: 180px;
+}
+
+.perspectiva_dentro{
+	background-color: black;
+	transform: rotateX(45deg);
+}
+
+@keyframes minhaKeyframe{
+	from{
+		width: 50px;
+	}
+
+	to{
+		width: 200px;
+	}
+}
+
+.keyframe{
+	animation: minhaKeyframe 5s infinite;
+}

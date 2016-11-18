@@ -1,0 +1,19 @@
+/*ul li a[href]{
+	color: green;
+}*/
+
+ul li a[href="http://"]{
+	color: red;
+}
+
+ul li a[href$='.html']{
+	color: orange;
+}
+
+ul li a[href^='#']{
+	color: yellow;
+}
+
+ul li:nth-child(odd){
+	background-color: blue;	
+}

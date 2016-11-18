@@ -1,0 +1,41 @@
+@vermelho: red;
+@azul: blue;
+@amarelo: yellow;
+@laranja: orange;
+
+#conteudo{
+	background-color: @azul;
+	color: @vermelho;
+	.rounded(20px);
+}
+
+.rounded(@r: 5px){
+	-webkit-border-radius: @r;
+	-moz-border-radius: @r;
+	-o-border-radius: @r;
+	-ms-border-radius: @r;
+	border-radius: @r;
+}
+
+#aninhamento{
+	background-color: darken(@amarelo, 50%);
+	.rounded();
+
+	nav{
+
+		background-color: lighten(@laranja, 20%);
+		width: 50%;
+
+		li{
+			padding: 30px;
+
+			a{
+				color: @azul;
+
+				&:hover{
+					color: @vermelho;
+				}
+			}
+		}
+	}
+}
